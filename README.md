@@ -1,5 +1,6 @@
 # vscode-hpdialog
-Highlighting extension for viewing HP2's dialog files in VS Code. Haven't done much VS Code extension stuff so its a bit jank but it should work
+Highlighting extension for viewing HP2's dialog files in VS Code. It also supports autocompleting the emote declarations.
+Haven't done much VS Code extension stuff so its a bit jank but it should work
 
 
 ## How to Install
