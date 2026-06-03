@@ -2,19 +2,19 @@
     "name": "hpdialog",
     "displayName": "HPDialog",
     "description": "HP Dialog localization file highlighting",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/mocacola02/vscode-hpdialog.git"
-    },
+
     "publisher": "mocacola02",
+
     "engines": {
         "vscode": "^1.120.0"
     },
+
     "categories": [
         "Programming Languages"
     ],
+
     "contributes": {
         "languages": [
             {
@@ -29,38 +29,52 @@
                     ".ger",
                     ".ita",
                     ".spa"
-                ],
-                "configuration": "./language-configuration.json"
+                ]
             }
         ],
+
         "grammars": [
             {
                 "language": "hpdialog",
                 "scopeName": "source.hpdialog",
                 "path": "./syntaxes/hpdialog.tmLanguage.json"
             }
-        ],
-        "themes": [
-            {
-                "label": "HPDialog Theme",
-                "uiTheme": "vs-dark",
-                "path": "./themes/hpdialog-color-theme.json"
-            }
         ]
     },
+
     "main": "./out/extension.js",
+
+    "files": [
+        "out/**",
+        "syntaxes/**",
+        "language-configuration.json",
+        "themes/**",
+        "package.json"
+    ],
+
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"No tests specified\" && exit 0"
     },
+
     "keywords": [],
+
     "author": "",
+
     "type": "commonjs",
+
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mocacola02/vscode-hpdialog.git"
+    },
+
     "bugs": {
         "url": "https://github.com/mocacola02/vscode-hpdialog/issues"
     },
+
     "homepage": "https://github.com/mocacola02/vscode-hpdialog#readme",
+
     "devDependencies": {
         "@types/vscode": "^1.120.0",
-        "typescript": "^6.0.3"
+        "typescript": "^5.0.0"
     }
 }
