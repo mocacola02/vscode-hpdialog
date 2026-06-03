@@ -1,41 +1,26 @@
 import * as vscode from "vscode";
 
-const EMOTES = [
-    "Normal",
-    "Happy",
-    "Whisper",
-    "Sarcastic",
-    "Sad",
-    "Mad"
-];
+const EMOTES = ["Normal", "Happy", "Whisper", "Sarcastic", "Sad", "Mad"];
 
 export function activate(context: vscode.ExtensionContext) {
-
+    console.log("HPDialog extension activated");
     const provider = vscode.languages.registerCompletionItemProvider(
         "hpdialog",
         {
             provideCompletionItems(document, position) {
 
-                const line = document.lineAt(position).text;
-                const textBeforeCursor = line.substring(0, position.character);
+                const line = document.lineAt(position.line).text;
+                const beforeCursor = line.substring(0, position.character);
 
-                const equalsIndex = textBeforeCursor.indexOf("=");
-                if (equalsIndex === -1) {
-                    return [];
-                }
+                const lastEquals = beforeCursor.lastIndexOf("=");
+                const lastOpen = beforeCursor.lastIndexOf("[");
 
-                const afterEquals = textBeforeCursor.substring(equalsIndex + 1);
+                const insideEmote =
+                    lastEquals !== -1 &&
+                    lastOpen > lastEquals &&
+                    !beforeCursor.slice(lastOpen).includes("]");
 
-                const openBracket = afterEquals.lastIndexOf("[");
-                const closeBracket = afterEquals.lastIndexOf("]");
-
-                const insideEmotion =
-                    openBracket !== -1 &&
-                    openBracket > closeBracket;
-
-                if (!insideEmotion) {
-                    return [];
-                }
+                if (!insideEmote) return undefined;
 
                 return EMOTES.map(emote => {
                     const item = new vscode.CompletionItem(
@@ -43,17 +28,17 @@ export function activate(context: vscode.ExtensionContext) {
                         vscode.CompletionItemKind.Value
                     );
 
-                    item.insertText = emote;
-
-                    item.filterText = emote;
-                    item.preselect = true;
-
+                    item.commitCharacters = ["]"];
                     return item;
                 });
             }
         },
-        "[", "="
+        "=",
+        "[",
+        " "
     );
 
     context.subscriptions.push(provider);
 }
+
+export function deactivate() {}

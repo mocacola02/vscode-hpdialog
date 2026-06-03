@@ -1,12 +1,12 @@
 {
-    "comments": {},
     "brackets": [
         ["[", "]"]
     ],
     "autoClosingPairs": [
         {
             "open": "[",
-            "close": "]"
+            "close": "]",
+            "notIn": ["string"]
         }
     ],
     "surroundingPairs": [

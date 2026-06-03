@@ -1,37 +1,40 @@
 {
-    "name": "HPDialog",
-    "scopeName": "source.hpdialog",
-    "patterns": [
-        { "include": "#section" },
-        { "include": "#line" }
-    ],
-    "repository": {
+  "name": "HPDialog",
+  "scopeName": "source.hpdialog",
+  "patterns": [
+    { "include": "#line" }
+  ],
+  "repository": {
 
-        "section": {
-            "patterns": [
-                {
-                    "name": "entity.name.section.hpdialog",
-                    "match": "^\\[[A-Za-z0-9_]+\\]$"
-                }
-            ]
+    "line": {
+      "patterns": [
+
+        {
+          "name": "comment.line.hpdialog",
+          "match": "^/.*"
         },
 
-        "line": {
-            "patterns": [
-                {
-                    "match": "^(\\[[A-Za-z0-9_]+\\])$",
-                    "name": "entity.name.section.hpdialog"
-                },
-                {
-                    "match": "^(\\w+)(=)(\\[[A-Za-z0-9_]+\\])(.*)$",
-                    "captures": {
-                        "1": { "name": "string.quoted.hpdialog" },
-                        "2": { "name": "keyword.operator.hpdialog" },
-                        "3": { "name": "keyword.control.hpdialog" },
-                        "4": { "name": "" }
-                    }
-                }
-            ]
+        {
+          "name": "string.key.hpdialog",
+          "match": "^\\w+(?==)"
+        },
+
+        {
+          "name": "keyword.operator.hpdialog",
+          "match": "="
+        },
+
+        {
+          "name": "keyword.control.emote.hpdialog",
+          "match": "(?<=\\=)\\[[A-Za-z0-9_]*\\]"
+        },
+
+        {
+          "name": "entity.name.section.hpdialog",
+          "match": "^\\[[A-Za-z0-9_]*\\]"
         }
+
+      ]
     }
+  }
 }
