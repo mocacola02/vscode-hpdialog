@@ -48,8 +48,8 @@
         "out/**",
         "syntaxes/**",
         "language-configuration.json",
-        "themes/**",
-        "package.json"
+        "package.json",
+        "LICENSE"
     ],
 
     "scripts": {
