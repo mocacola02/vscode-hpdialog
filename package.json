@@ -2,9 +2,13 @@
     "name": "hpdialog",
     "displayName": "HPDialog",
     "description": "HP Dialog localization file highlighting",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "MIT",
-    "repository": "https://github.com/mocacola02/vscode-hpdialog",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mocacola02/vscode-hpdialog.git"
+    },
+    "publisher": "mocacola02",
     "engines": {
         "vscode": "^1.100.0"
     },
@@ -43,5 +47,20 @@
                 "path": "./themes/hpdialog-color-theme.json"
             }
         ]
+    },
+    "main": "./out/extension.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/mocacola02/vscode-hpdialog/issues"
+    },
+    "homepage": "https://github.com/mocacola02/vscode-hpdialog#readme",
+    "devDependencies": {
+        "@types/vscode": "^1.120.0",
+        "typescript": "^6.0.3"
     }
 }
