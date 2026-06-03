@@ -1,0 +1,45 @@
+{
+    "name": "hpdialog",
+    "displayName": "HPDialog",
+    "description": "HP Dialog localization file highlighting",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "hpdialog",
+                "aliases": [
+                    "HPDialog"
+                ],
+                "extensions": [
+                    ".int",
+                    ".usa",
+                    ".fra",
+                    ".ger",
+                    ".ita",
+                    ".spa"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "hpdialog",
+                "scopeName": "source.hpdialog",
+                "path": "./syntaxes/hpdialog.tmLanguage.json"
+            }
+        ],
+        "themes": [
+            {
+                "label": "HPDialog Theme",
+                "uiTheme": "vs-dark",
+                "path": "./themes/hpdialog-color-theme.json"
+            }
+        ]
+    }
+}

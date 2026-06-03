@@ -1,0 +1,25 @@
+{
+    "name": "HPDialog Theme",
+    "type": "dark",
+    "colors": {},
+    "tokenColors": [
+        {
+            "scope": "entity.name.section.hpdialog",
+            "settings": {
+                "foreground": "#f07c7c"
+            }
+        },
+        {
+            "scope": "variable.other.key.hpdialog",
+            "settings": {
+                "foreground": "#ffb26a"
+            }
+        },
+        {
+            "scope": "entity.name.emotion.hpdialog",
+            "settings": {
+                "foreground": "#85bbf5"
+            }
+        }
+    ]
+}
