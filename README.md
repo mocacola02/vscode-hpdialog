@@ -9,3 +9,4 @@ Highlighting extension for viewing HP2's dialog files in VS Code.
 - Click the three dots in the top right corner of the Extensions window.
 - Click "Install from VSIX..." and select the downloaded `.vsix` file.
 - You're good to go! You may have to uninstall old versions if you're updating.
+- If the file isn't autodetected, you can change the language mode to HPDialog by clicking the language mode name in the bottom right corner of the main editor window.
