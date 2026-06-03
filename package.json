@@ -2,7 +2,7 @@
     "name": "hpdialog",
     "displayName": "HPDialog",
     "description": "HP Dialog localization file highlighting",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "license": "MIT",
     "repository": {
         "type": "git",
@@ -10,7 +10,7 @@
     },
     "publisher": "mocacola02",
     "engines": {
-        "vscode": "^1.100.0"
+        "vscode": "^1.120.0"
     },
     "categories": [
         "Programming Languages"
