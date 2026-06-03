@@ -3,8 +3,10 @@
     "displayName": "HPDialog",
     "description": "HP Dialog localization file highlighting",
     "version": "1.0.0",
+    "license": "MIT",
+    "repository": "https://github.com/mocacola02/vscode-hpdialog",
     "engines": {
-        "vscode": "^1.80.0"
+        "vscode": "^1.100.0"
     },
     "categories": [
         "Programming Languages"
